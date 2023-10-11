@@ -1,38 +1,51 @@
+const submitButton = document.querySelector('.submit-button');
+
 const xInput = document.querySelector('.x-input');
 
 let validY = false;
 const yInput = document.querySelector('.y-input');
 
-yInput.addEventListener('change', () => {
+yInput.addEventListener('input', () => {
     const y = parseFloat(yInput.value);
-    if (y > -5 && y < 3) {
+    if (y >= -5 && y <= 3) {
         validY = true;
-        //TODO: change color
+        yInput.style.background = "green";
     } else {
-        //TODO: change color
+        validY = false;
+        yInput.style.background = "red";
+    }
+    
+    if (!(validY && validR)) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
     }
 });
 
 let validR = false;
 const rInput = document.querySelector('.r-input');
 
-rInput.addEventListener('change', (e) => {
+rInput.addEventListener('input', (e) => {
     const r = parseFloat(rInput.value);
-    if (r > -5 && r < 3) {
+    if (r >= 2 && r <= 5) {
         validR = true;
-        //TODO: change color
+        rInput.style.background = "green";
     } else {
-        //TODO: change color
+        validR = false;
+        rInput.style.background = "red  ";
+    }
+    
+    if (!(validY && validR)) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
     }
 })
 
-document.querySelector('.submit-button').addEventListener('click', (e) => {
+submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     
-    if (validY && validR) {
-        const url = `php/checkPoint.php?x=${xInput.value}&y=${yInput.value}&r=${rInput.value}`
-        document.querySelector('.debug').innerHTML = url;
-        const promise = fetch(url);
-    }
+    const url = `php/checkPoint.php?x=${xInput.value}&y=${yInput.value}&r=${rInput.value}`
+    document.querySelector('.debug').innerHTML = url;
+    const promise = fetch(url);
 });
-

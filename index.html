@@ -2,68 +2,85 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <title>Web page example</title>
+    <title>Area Checker</title>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <form method="GET" action="php/checkPoint.php" id="request_form"></form>
+    <form method="GET" action="php/checkPoint.php" id="request-form"></form>
     <table>
         <tr>
             <td> <h1>Lab 1 Web</h1> </td>
         </tr>
+
+
         <!-- Image for the checked area -->
         <tr>
             <td>
                 <img src="img/pointArea.png" alt="area">
             </td>
         </tr>
+
+
         <!-- Form input -->
         <tr>
             <td> Point: </td>
         </tr>
+
         <!-- X input -->
         <tr>
             <td>
                 <label for="X">
-                    X:
-                    <select name="X" id="X" form="request_form">
-                        <option value="-3">-3</option>
-                        <option value="-2">-2</option>
-                        <option value="-1">-1</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                X:
+                <select name="X" id="X" form="request-form" class="x-input">
+                    <option value="-3">-3</option>
+                    <option value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                 </label>
             </td>
         </tr>
+
+
         <!-- Y input -->
         <tr>
             <td>
                 <label for="Y">
                     Y:
-                    <input type="text" name="Y" id="Y" form="request_form">
+                    <input type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
                 </label>
             </td>
         </tr>
+
+        <!-- Radius input -->
         <tr>
             <td>Radius</td>
         </tr>
-        <!-- Radius input -->
+
         <tr>
             <td>
                 <label for="R">
                     R:
-                    <input type="text" name="R" id="R" form="request_form">
+                    <input type="text" value="0" name="R" id="R" form="request-form" class="r-input">
                 </label>
             </td>
         </tr>
+
+
         <!-- Submit -->
         <tr>
             <td>
-                <input type="submit" form="request_form">
+                <input type="submit" form="request-form" class="submit-button">
+            </td>
+        </tr>
+        <tr>
+            <td class="debug">
+
             </td>
         </tr>
     </table>

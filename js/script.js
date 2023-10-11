@@ -22,7 +22,7 @@ yInput.addEventListener('input', () => {
 
 let validR = false;
 const rInput = document.querySelector('.r-input');
-rInput.addEventListener('input', (e) => {
+rInput.addEventListener('input', () => {
     const r = parseFloat(rInput.value);
     if (r >= 2 && r <= 5 && numberInputRegex.test(rInput.value) && rInput.value.replace('.', '').length < 16) {
         validR = true;

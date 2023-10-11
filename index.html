@@ -5,7 +5,7 @@
     <title>Web page example</title>
 </head>
 <body>
-    <form method="POST" id="request_form"></form>
+    <form method="GET" action="php/checkPoint.php" id="request_form"></form>
     <table>
         <tr>
             <td> <h1>Lab 1 Web</h1> </td>
@@ -25,7 +25,17 @@
             <td>
                 <label for="X">
                     X:
-                    <input type="range" name="X" id="X" min="-3" max="5" form="request_form">
+                    <select name="X" id="X" form="request_form">
+                        <option value="-3">-3</option>
+                        <option value="-2">-2</option>
+                        <option value="-1">-1</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </label>
             </td>
         </tr>

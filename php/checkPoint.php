@@ -8,9 +8,11 @@ function isInArea($x, $y, $r) {
 
 function validateInput($x, $y, $r) {
     if (is_numeric($x) && is_numeric($y) && is_numeric($r)) {
-        return in_array($x, [-3, -2, -1, 0, 1, 2, 3, 4, 5]) &&
+        if (in_array($x, [-3, -2, -1, 0, 1, 2, 3, 4, 5]) &&
             $y <= 3 && $y >= -5 &&
-            $r <= 5 && $r >= 2;
+            $r <= 5 && $r >= 2) {
+            return true;
+        }
     }
     return false;
 }
@@ -25,29 +27,19 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     return;
 }
 
+
 $x = isset($_GET["X"]) ? $_GET["X"] : null;
 $y = isset($_GET["Y"]) ? $_GET["Y"] : null;
 $r = isset($_GET["R"]) ? $_GET["R"] : null;
 
 if (validateInput($x, $y, $r)) {
-
     $isInArea = isInArea($x, $y, $r);
-    
+
     $currentTime = date("Y-m-d H:i:s");
     $endTime = microtime(true);
-    $executionTime = number_format($endTime - $startTime, 6); 
-?>
-
-<!-- The returned data -->
-<tr class="results-table">
-    <td><?php echo $x ?></td>
-    <td><?php echo $y ?></td>
-    <td><?php echo $r ?></td>
-    <?php echo $isInArea ? "<td style='color: lightgreen'>In area</td>" : "<td style='color: indianred'>Outside area</td>"; ?>
-    <td><?php echo $currentTime ?></td>
-    <td><?php echo $executionTime ?> с</td>
-</tr>
-    
-<?php
+    $executionTime = number_format($endTime - $startTime, 6);
+    $GLOBALS["result"] = array($x, $y, $r, $isInArea, $currentTime, $executionTime);
+    include ('resultTable.php');
 }
+
 ?>

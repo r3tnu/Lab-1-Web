@@ -6,7 +6,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <form method="GET" action="php/checkPoint.php" id="request-form"></form>
+    <form id="request-form"></form>
     <table>
         <tr>
             <td> <h1>Lab 1 Web</h1> </td>
@@ -23,7 +23,7 @@
 
         <!-- Form input -->
         <tr>
-            <td> Point: </td>
+            <td> <b>Point:</b> </td>
         </tr>
 
         <!-- X input -->
@@ -52,21 +52,23 @@
             <td>
                 <label for="Y">
                     Y:
-                    <input type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
+                    <input style="background-color:lightgreen" type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
+                    [-5, 3]
                 </label>
             </td>
         </tr>
 
         <!-- Radius input -->
         <tr>
-            <td>Radius</td>
+            <td> <b>Radius:</b> </td>
         </tr>
 
         <tr>
             <td>
                 <label for="R">
                     R:
-                    <input type="text" value="0" name="R" id="R" form="request-form" class="r-input">
+                    <input style="background-color:lightgreen" type="text" value="2" name="R" id="R" form="request-form" class="r-input">
+                    [2, 5]
                 </label>
             </td>
         </tr>
@@ -79,9 +81,16 @@
             </td>
         </tr>
         <tr>
-            <td class="debug">
-
-            </td>
+            <table class="results-table">
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Result</th>
+                    <th>Current time</th>
+                    <th>Execution time</th>
+                </tr>
+            </table>
         </tr>
     </table>
 </body>

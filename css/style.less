@@ -1,6 +1,45 @@
+@mainText: Akrobat, Verdana, sans-serif;
+@mainColor: #04293A;
+@darkerColor: #041C32;
+@lighterColor: #064663;
+@highlightColor: #ECB365;
+@textColor: white;
 
+.page-header {
+  font-family: @mainText;
+  font-size: 30px;
+
+  text-align: right;
+  display: block;
+  position: sticky;
+
+  top: 0;
+  left: 0;
+  width: 40%;
+
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+
+  border-radius: 0 0 25px 0;
+  background-color: #041C32;
+}
+.logo {
+  width: 100px;
+  position: absolute;
+  left: 20px;
+
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.main-table {
+  width: 100%;
+}
 
 body {
-    $test: #ECB365;
-    background-color: $test;
+  text-align: center;
+  margin: 0;
+  background-color: @mainColor;
+  color: @textColor;
 }

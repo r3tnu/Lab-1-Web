@@ -2,96 +2,100 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <title>Area Checker</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <script src="js/script.js" defer></script>
+    <title>Area Checker</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form id="request-form"></form>
-    <table>
-        <tr>
-            <td> <h1>Lab 1 Web</h1> </td>
-        </tr>
+<header> Бритов Сергей Олегович, гр. P3119, вр. 2990 </header>
+
+<form id="request-form"></form>
+<table>
+    <tr>
+        <td> <h1>Lab 1 Web</h1> </td>
+    </tr>
 
 
-        <!-- Image for the checked area -->
-        <tr>
-            <td>
-                <img src="img/pointArea.png" alt="area">
-            </td>
-        </tr>
+    <!-- Image for the checked area -->
+    <tr>
+        <td>
+            <img src="img/pointArea.png" alt="area">
+        </td>
+    </tr>
 
 
-        <!-- Form input -->
-        <tr>
-            <td> <b>Point:</b> </td>
-        </tr>
+    <!-- Form input -->
+    <tr>
+        <td> <b>Point:</b> </td>
+    </tr>
 
-        <!-- X input -->
-        <tr>
-            <td>
-                <label for="X">
-                X:
-                <select name="X" id="X" form="request-form" class="x-input">
-                    <option value="-3">-3</option>
-                    <option value="-2">-2</option>
-                    <option value="-1">-1</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                </label>
-            </td>
-        </tr>
-
-
-        <!-- Y input -->
-        <tr>
-            <td>
-                <label for="Y">
-                    Y:
-                    <input style="background-color:lightgreen" type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
-                    [-5, 3]
-                </label>
-            </td>
-        </tr>
-
-        <!-- Radius input -->
-        <tr>
-            <td> <b>Radius:</b> </td>
-        </tr>
-
-        <tr>
-            <td>
-                <label for="R">
-                    R:
-                    <input style="background-color:lightgreen" type="text" value="2" name="R" id="R" form="request-form" class="r-input">
-                    [2, 5]
-                </label>
-            </td>
-        </tr>
+    <!-- X input -->
+    <tr>
+        <td>
+            <label for="X">
+            X:
+            <select name="X" id="X" form="request-form" class="x-input">
+                <option value="-3">-3</option>
+                <option value="-2">-2</option>
+                <option value="-1">-1</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            </label>
+        </td>
+    </tr>
 
 
-        <!-- Submit -->
-        <tr>
-            <td>
-                <input type="submit" form="request-form" class="submit-button">
-            </td>
-        </tr>
-        <tr>
-            <table class="results-table">
-                <tr>
-                    <th>X</th>
-                    <th>Y</th>
-                    <th>R</th>
-                    <th>Result</th>
-                    <th>Current time</th>
-                    <th>Execution time</th>
-                </tr>
-            </table>
-        </tr>
-    </table>
+    <!-- Y input -->
+    <tr>
+        <td>
+            <label for="Y">
+                Y:
+                <input style="background-color:lightgreen" type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
+                [-5, 3]
+            </label>
+        </td>
+    </tr>
+
+    <!-- Radius input -->
+    <tr>
+        <td> <b>Radius:</b> </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="R">
+                R:
+                <input style="background-color:lightgreen" type="text" value="2" name="R" id="R" form="request-form" class="r-input">
+                [2, 5]
+            </label>
+        </td>
+    </tr>
+
+
+    <!-- Submit -->
+    <tr>
+        <td>
+            <input type="submit" form="request-form" class="submit-button">
+        </td>
+    </tr>
+    <tr>
+        <table class="results-table">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Result</th>
+                <th>Current time</th>
+                <th>Execution time</th>
+            </tr>
+        </table>
+    </tr>
+</table>
 </body>
 </html>

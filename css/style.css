@@ -1,0 +1,33 @@
+.page-header {
+  font-family: Akrobat, Verdana, sans-serif;
+  font-size: 30px;
+  text-align: right;
+  display: block;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 40%;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  border-radius: 0 0 25px 0;
+  background-color: #041C32;
+}
+.logo {
+  width: 100px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.main-table {
+  width: 100%;
+}
+body {
+  text-align: center;
+  margin: 0;
+  background-color: #04293A;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

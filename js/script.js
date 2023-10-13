@@ -4,7 +4,7 @@ const submitButton = document.querySelector('.submit-button');
 
 const xInput = document.querySelector('.x-input');
 
-let validY = false;
+let validY = true;
 const yInput = document.querySelector('.y-input');
 yInput.addEventListener('input', () => {
 
@@ -20,7 +20,7 @@ yInput.addEventListener('input', () => {
     submitButton.disabled = !(validY && validR);
 });
 
-let validR = false;
+let validR = true;
 const rInput = document.querySelector('.r-input');
 rInput.addEventListener('input', () => {
     const r = parseFloat(rInput.value);

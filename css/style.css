@@ -111,4 +111,21 @@ label {
   transition-duration: 400ms;
   width: 200px;
 }
+.clear-button {
+  border: none;
+  border-radius: 2px;
+  background-color: #041C32;
+  color: white;
+  padding: 12px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px;
+  transition-duration: 400ms;
+}
+.clear-button:hover {
+  transition-duration: 400ms;
+  background-color: #ECB365;
+}
 /*# sourceMappingURL=style.css.map */

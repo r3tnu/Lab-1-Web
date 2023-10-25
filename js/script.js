@@ -1,4 +1,4 @@
-const numberInputRegex = /^-?(\d+(\.\d+)?)$/;
+const numberInputRegex = /^[-+]?(\d+(\.\d+)?)$/;
 
 const submitButton = document.querySelector('.submit-button');
 
@@ -36,7 +36,7 @@ rInput.addEventListener('input', () => {
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
-    const url = `php/checkPoint.php?X=${xInput.value}&Y=${yInput.value}&R=${rInput.value}`
+    const url = `php/checkPoint.php?X=${parseInt(xInput.value)}&Y=${parseFloat(yInput.value)}&R=${parseFloat(rInput.value)}`
     fetch(url)
         .then(response => response.text())
         .then(insertData);
@@ -44,6 +44,23 @@ submitButton.addEventListener('click', (e) => {
 
 function insertData(data) {
     const resultsTable = document.querySelector('.results-table');
-    const innerHTML = resultsTable.innerHTML;
-    resultsTable.innerHTML = innerHTML + data;
+    resultsTable.innerHTML = resultsTable.innerHTML + data;
+    localStorage.setItem("table", localStorage.getItem("table") + data);    
 }
+
+window.addEventListener('load', () => {
+    if (localStorage.getItem("table") !== "") {
+        const resultsTable = document.querySelector('.results-table');
+        resultsTable.innerHTML = resultsTable.innerHTML + localStorage.getItem("table");
+    }
+})
+
+const clearButton = document.querySelector('.clear-button');
+
+clearButton.addEventListener('click', () => {
+    const resultsTable = document.querySelector('.results-table');
+    const headerRow = document.querySelector('.header-result-row');
+    console.log(headerRow);
+    resultsTable.innerHTML = "<tr class='header-result-row'>" + headerRow.innerHTML + "</tr>";
+    localStorage.setItem("table", "");
+})

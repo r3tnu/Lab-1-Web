@@ -10,33 +10,34 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-<header class="page-header"> <img class="logo" src="img/logo.png" alt="logo" width="1040"> Бритов Сергей Олегович, гр. P3119, вр. 2990 </header>
+<img class="logo" src="img/logo.png" alt="logo" width="1040">
+<header class="page-header"> Бритов Сергей Олегович, гр. P3119, вр. 2990 </header>
 
 <form id="request-form"></form>
 <table class="main-table">
     <tr>
-        <td> <h1>Lab 1 Web</h1> </td>
+        <td> <h1 class="header">Lab 1 Web</h1> </td>
     </tr>
 
 
     <!-- Image for the checked area -->
     <tr>
         <td>
-            <img src="img/pointArea.png" alt="area">
+            <img class="areaImage" src="img/pointArea.png" alt="area">
         </td>
     </tr>
 
 
     <!-- Form input -->
     <tr>
-        <td> <b>Point:</b> </td>
+        <td class="sub-header"> <b>Point:</b> </td>
     </tr>
 
     <!-- X input -->
     <tr>
         <td>
             <label for="X">
-            X:
+            X [-3; 5]: <br>
             <select name="X" id="X" form="request-form" class="x-input">
                 <option value="-3">-3</option>
                 <option value="-2">-2</option>
@@ -57,24 +58,22 @@
     <tr>
         <td>
             <label for="Y">
-                Y:
-                <input style="background-color:lightgreen" type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
-                [-5, 3]
+                Y [-5, 3]: <br>
+                <input type="text" value="0" name="Y" id="Y" form="request-form" class="y-input">
             </label>
         </td>
     </tr>
 
     <!-- Radius input -->
     <tr>
-        <td> <b>Radius:</b> </td>
+        <td class="sub-header"> <b>Radius:</b> </td>
     </tr>
 
     <tr>
         <td>
             <label for="R">
-                R:
-                <input style="background-color:lightgreen" type="text" value="2" name="R" id="R" form="request-form" class="r-input">
-                [2, 5]
+                R [2, 5]: <br>
+                <input type="text" value="2" name="R" id="R" form="request-form" class="r-input">
             </label>
         </td>
     </tr>

@@ -22,7 +22,7 @@ session_start();
 date_default_timezone_set('Europe/Moscow');
 $startTime = microtime(true);
 
-if ($_SERVER["REQUEST_METHOD"] !== "GET") {
+if ($_SERVER["REQUEST_METHOD"] != "GET") {
     http_response_code(405);
     return;
 }

@@ -49,7 +49,7 @@ function insertData(data) {
 }
 
 window.addEventListener('load', () => {
-    if (localStorage.getItem("table") !== "") {
+    if (localStorage.getItem("table") !== "" && localStorage.getItem("table") != null) {
         const resultsTable = document.querySelector('.results-table');
         resultsTable.innerHTML = resultsTable.innerHTML + localStorage.getItem("table");
     }

@@ -45,7 +45,11 @@ submitButton.addEventListener('click', (e) => {
 function insertData(data) {
     const resultsTable = document.querySelector('.results-table');
     resultsTable.innerHTML = resultsTable.innerHTML + data;
-    localStorage.setItem("table", localStorage.getItem("table") + data);    
+    if (localStorage.getItem("table") !== "" && localStorage.getItem("table") != null) {
+        localStorage.setItem("table", localStorage.getItem("table") + data);
+    } else {
+        localStorage.setItem("table", data);
+    }
 }
 
 window.addEventListener('load', () => {
